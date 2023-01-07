@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Stack } from "@mui/system";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import { logo } from "../Constants/Constants";
 
 const NavBar = () => {
   return (
@@ -18,7 +19,7 @@ const NavBar = () => {
         }}
       >
         <Link to="/" style={{ display: "flex", alignItems: "center" }} />
-        <img alt="logomain" height={45} />
+        <img src={logo} alt="logomain" height={45} />
         <SearchBar />
       </Stack>
     </Fragment>
