@@ -3,9 +3,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { categories } from "../Constants/Constants";
 
-function SideBar() {
-  const selectedCategory = "New";
-
+const SideBar = ({ selectedCategory, setSelectedCategory }) => {
   return (
     <Stack
       direction="row"
@@ -19,16 +17,16 @@ function SideBar() {
         return (
           <button
             className="category-btn"
+            onClick={() => setSelectedCategory(category.name)}
             style={{
-              background: category.name === selectedCategory && "#FC1503",
+              background: category.name === selectedCategory && "skyblue",
               color: "white",
             }}
             key={category.name}
           >
             <span
               style={{
-                color:
-                  category.name === selectedCategory ? "lightcoral" : "red",
+                color: category.name === selectedCategory ? "black" : "red",
                 marginRight: "15px",
               }}
             >
@@ -46,6 +44,6 @@ function SideBar() {
       })}
     </Stack>
   );
-}
+};
 
 export default SideBar;
