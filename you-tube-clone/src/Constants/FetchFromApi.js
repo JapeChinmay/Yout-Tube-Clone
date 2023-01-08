@@ -1,7 +1,6 @@
-import React from "react";
 import axios from "axios";
 
-const base_url = "https://youtube-v31.p.rapidapi.com/captions";
+const base_url = "https://youtube-v31.p.rapidapi.com";
 
 const options = {
   method: "GET",
@@ -14,7 +13,7 @@ const options = {
 };
 
 export const FetchFromApi = async (url) => {
-  const { data } = await axios.get(`${base_url}/ ${url}`, options);
+  const { data } = await axios.get(`${base_url}/${url}`, options);
 
   return data;
 };
